@@ -1,0 +1,58 @@
+div{
+    width: 100px;
+    height: 200px;
+    border: 1px solid black;
+    position: absolute;
+    z-index: 0;
+}
+
+.red{
+    background-color: red;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.red:hover{
+    z-index: 1;
+}
+.green{
+    background-color: green;
+    top: 20px;
+    left: 50px;
+    right: 0;
+    bottom: 0;
+}
+.green:hover{
+    z-index: 1;
+}
+.yellow{
+    background-color: yellow;
+    top: 40px;
+    left: 100px;
+    right: 0;
+    bottom: 0;
+}
+.yellow:hover{
+    z-index: 1;
+}
+.blue{
+    background-color: blue;
+    top: 60px;
+    left: 150px;
+    right: 0;
+    bottom: 0;
+}
+.blue:hover{
+    z-index: 1;
+}
+.grey{
+    background-color: grey;
+    top: 80px;
+    left: 200px;
+    right: 0;
+    bottom: 0;
+}
+.grey:hover{
+    z-index: 1;
+}
