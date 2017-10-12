@@ -19,10 +19,13 @@
 .section-pluses__title_align_center,
 .section-screenshots__title_align_center,
 .section-reviews__title_align_center,
-.section-prices__title_align_center{
+.section-prices__title_align_center,
+.main-footer__title_align_center{
     text-align: center;
 }
-
+.main-footer__title_color_lite{
+    color: #fff;
+}
 
 /*----------header----------*/
 .main-header{
@@ -179,15 +182,9 @@
     color: #fff;
     padding: 50px;
 }
-.contacts__title{
-    margin-top: 0;
-    text-align: center;
-    font-size: 30px;
-    line-height: 36px;
-    font-weight: 400;
-}
-.copyright p{
-    margin-top: 3px;
+
+.copyright:last-child{
+    line-height: 1px;
     text-align: center;
     font-size: small;
 }
