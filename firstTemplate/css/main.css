@@ -8,7 +8,7 @@
     line-height: 24px;
 }
 
-/*----------Header----------*/
+/*----------header----------*/
 .main-header{
     display: flex;
     justify-content: space-between;
@@ -17,7 +17,7 @@
     color: #fff;
 }
 
-/*----------Product-info----------*/
+/*----------product-info----------*/
 .product-info{
     padding: 0;
     max-width: 52%;
@@ -37,21 +37,22 @@
 
     line-height: 36px;
 }
-/*----------Product-image----------*/
+/*----------product-image----------*/
 .product-image{
     width: 470px;
     height: 214px;
     background-color: white;
 }
 
-/*----------About-product----------*/
-.about-product{
+/*----------section-about----------*/
+.section-about{
     display: flex;
     justify-content: space-between;
     padding: 50px;
     background-color: #fcfcfc;
 }
-.about-product__text-wrapper{
+/*----------about-product----------*/
+.about-product{
     max-width: 52%;
 }
 .about-product__title{
@@ -61,7 +62,8 @@
     line-height: 36px;
     font-weight: 400;
 }
-.about-product__image{
+/*----------about-product-image----------*/
+.about-product-image{
     width: 430px;
     height: 245px;
     background-color: #435061;
