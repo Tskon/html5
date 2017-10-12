@@ -195,13 +195,13 @@
     border-width: 0;
     width: 500px;
     height: 40px;
-    padding: 10px 15px;
+    padding: 5px 10px;
     margin-bottom: 20px;
 }
 .contact-form__item-message{
     border-radius: 5px;
     border-width: 0;
-    padding: 10px 15px;
+    padding: 5px 10px;
     margin-bottom: 20px;
     width: 500px;
 }
