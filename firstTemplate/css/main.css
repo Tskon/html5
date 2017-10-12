@@ -7,7 +7,6 @@
     font-weight: 400;
     line-height: 24px;
 }
-
 /*----------common-title----------*/
 .common-title{
     margin-top: 0;
@@ -18,7 +17,9 @@
 }
 /*----------title-modifiers----------*/
 .section-pluses__title_align_center,
-.section-screenshots__title_align_center{
+.section-screenshots__title_align_center,
+.section-reviews__title_align_center,
+.section-prices__title_align_center{
     text-align: center;
 }
 
@@ -31,7 +32,6 @@
     background-color: #435061;
     color: #fff;
 }
-
 /*----------product-info----------*/
 .product-info{
     padding: 0;
@@ -59,6 +59,7 @@
     background-color: white;
 }
 
+
 /*----------section-about----------*/
 .section-about{
     display: flex;
@@ -70,13 +71,13 @@
 .about-product{
     max-width: 52%;
 }
-
 /*----------about-product-image----------*/
 .about-product-image{
     width: 430px;
     height: 245px;
     background-color: #435061;
 }
+
 
 /*----------pluses----------*/
 .section-pluses{
@@ -91,6 +92,7 @@
     line-height: 36px;
     font-weight: 400;
 }
+
 
 /*----------section-screenshots----------*/
 .section-screenshots{
@@ -116,29 +118,21 @@
 }
 .screenshots__description p{
     margin: 0 0 0 15px;
-
 }
 
-/*----------Reviews----------*/
-.reviews{
+
+/*----------section-reviews----------*/
+.section-reviews{
     background-color: #eee;
     padding: 50px;
 }
-.reviews__title{
-    margin-top: 0;
-    text-align: center;
-    color: #435061;
-    font-size: 30px;
-    line-height: 36px;
-    font-weight: 400;
-}
-.reviews__wrapper{
+/*----------reviews----------*/
+.reviews{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
-
-/*----------Review----------*/
+/*----------review----------*/
 .review{
     display: flex;
     justify-content: flex-start;
@@ -171,21 +165,15 @@
     line-height: 18px;
 }
 
-/*----------Prices----------*/
-.prices{
+
+/*----------prices----------*/
+.section-prices{
     padding: 50px;
     background-color: #fcfcfc;
 }
-.prices__title{
-    margin-top: 0;
-    text-align: center;
-    color: #435061;
-    font-size: 30px;
-    line-height: 36px;
-    font-weight: 400;
-}
 
-/*----------Footer----------*/
+
+/*----------footer----------*/
 .contacts{
     background-color: #435061;
     color: #fff;
