@@ -82,15 +82,29 @@
     background-color: #eee;
     padding: 50px;
 }
-.pluses__title{
-    margin-top: 0;
-    text-align: center;
-    color: #435061;
-    font-size: 30px;
-    line-height: 36px;
-    font-weight: 400;
+.section-pluses summary{
+    outline: none;
 }
-
+.section-pluses summary::-webkit-details-marker {
+    display: none
+}
+.section-pluses summary:before {
+    content: "+";
+    background: #435061;
+    color: #fff;
+    float: left;
+    line-height: 20px;
+    font-size: 40px;
+    margin: 5px 10px 0 0;
+    padding: 6px 8px 6px 4px;
+    text-align: center;
+    min-width: 20px;
+    max-width: 20px;
+}
+.section-pluses details[open] summary:before {
+    content: "-";
+    padding: 3px 6px 9px 6px;
+}
 
 /*----------section-screenshots----------*/
 .section-screenshots{
