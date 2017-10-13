@@ -15,15 +15,10 @@
     line-height: 36px;
     font-weight: 400;
 }
-/*----------title-modifiers----------*/
-.section-pluses__title_align_center,
-.section-screenshots__title_align_center,
-.section-reviews__title_align_center,
-.section-prices__title_align_center,
-.main-footer__title_align_center{
+.common-title_align_center{
     text-align: center;
 }
-.main-footer__title_color_lite{
+.common-title_color_lite{
     color: #fff;
 }
 
