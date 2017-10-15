@@ -229,7 +229,9 @@
   border: none;
   background-color: #fff;
   width: 260px;
-  height: 40px; }
+  height: 40px;
+  font-weight: 700;
+  color: #435061; }
   .price__buy-btn:hover {
     background-color: #ddd; }
   .price__buy-btn:focus {
@@ -246,17 +248,20 @@
 
 /*contact-form */
 .contact-form {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between; }
+  display: inline-block;
+  width: 540px;
+  text-align: center; }
 
 .contact-form__item-name, .contact-form__item-email {
   border-radius: 5px;
   border-width: 0;
   width: 500px;
-  height: 40px;
+  height: 30px;
   padding: 5px 10px;
   margin-bottom: 20px; }
+  .contact-form__item-name:focus, .contact-form__item-email:focus {
+    outline: none;
+    background-color: antiquewhite; }
 
 .contact-form__item-message {
   border-radius: 5px;
@@ -264,11 +269,32 @@
   padding: 5px 10px;
   margin-bottom: 20px;
   width: 500px; }
+  .contact-form__item-message:focus {
+    outline: none;
+    background-color: antiquewhite; }
+
+.contact-form__send-btn {
+  margin: 0 20px 20px;
+  border-radius: 5px;
+  border: none;
+  background-color: #fff;
+  width: 140px;
+  height: 40px;
+  font-weight: 700;
+  color: #435061; }
+  .contact-form__send-btn:hover {
+    background-color: #ddd; }
+  .contact-form__send-btn:focus {
+    outline: none;
+    background-color: antiquewhite; }
 
 /*copyright */
 .copyright {
-  width: 1280px; }
+  width: 1280px;
+  background-color: #F2F2F2; }
   .copyright:last-child {
-    line-height: 1px;
     text-align: center;
-    font-size: small; }
+    font-size: 12px;
+    letter-spacing: 0.3px;
+    line-height: 24px;
+    margin: 0; }
