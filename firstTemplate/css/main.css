@@ -1,7 +1,7 @@
 .wrapper {
   width: 1280px;
   margin: 0 auto;
-  font-family: Arial;
+  font-family: Arial, monospace;
   color: #333333;
   font-size: 16px;
   font-weight: 400;
@@ -23,6 +23,7 @@
 
 /*----------header---------- */
 .main-header {
+  width: 1180px;
   display: flex;
   justify-content: space-between;
   padding: 50px;
@@ -56,6 +57,7 @@
 
 /*----------section-about---------- */
 .section-about {
+  width: 1180px;
   display: flex;
   justify-content: space-between;
   padding: 50px;
@@ -73,6 +75,7 @@
 
 /*----------pluses---------- */
 .section-pluses {
+  width: 1180px;
   background-color: #eee;
   padding: 50px; }
 
@@ -107,6 +110,7 @@
 
 /*----------section-screenshots---------- */
 .section-screenshots {
+  width: 1180px;
   padding: 50px;
   background-color: #fcfcfc; }
 
@@ -132,7 +136,8 @@
 
 /*----------section-reviews---------- */
 .section-reviews {
-  background-color: #eee;
+  width: 1180px;
+  background-color: #F2F2F2;
   padding: 50px; }
 
 /*reviews */
@@ -144,23 +149,29 @@
 /*review */
 .review {
   display: flex;
-  justify-content: flex-start;
   padding: 5px; }
 
 .review__image {
   display: inline-block;
   border-radius: 50%;
-  background-color: #445161;
+  background-color: #435061;
   min-width: 75px;
   height: 75px; }
 
 .review__text-wrapper {
   background-color: #e9e9e9;
   width: 470px;
-  border-radius: 4px;
-  margin-left: 10px; }
+  border-radius: 6px;
+  margin: 0 0 15px 24px; }
+  .review__text-wrapper:before {
+    content: url("../images/arrow-review.png");
+    position: relative;
+    left: -12px;
+    top: 27px;
+    z-index: 5; }
 
 .review__text {
+  margin-top: -10px;
   padding-left: 15px;
   font-size: 14px;
   font-style: italic;
@@ -175,12 +186,14 @@
 
 /*----------prices---------- */
 .section-prices {
+  width: 1180px;
   padding: 50px;
   background-color: #fcfcfc; }
 
 /*----------footer---------- */
 /*contacts */
 .contacts {
+  width: 1180px;
   background-color: #435061;
   color: #fff;
   padding: 50px; }
@@ -207,7 +220,9 @@
   width: 500px; }
 
 /*copyright */
-.copyright:last-child {
-  line-height: 1px;
-  text-align: center;
-  font-size: small; }
+.copyright {
+  width: 1280px; }
+  .copyright:last-child {
+    line-height: 1px;
+    text-align: center;
+    font-size: small; }
