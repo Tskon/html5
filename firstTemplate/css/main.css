@@ -161,7 +161,7 @@
 .review__text-wrapper {
   background-color: #e9e9e9;
   width: 470px;
-  border-radius: 6px;
+  border-radius: 5px;
   margin: 0 0 15px 24px; }
   .review__text-wrapper:before {
     content: url("../images/arrow-review.png");
@@ -189,6 +189,28 @@
   width: 1180px;
   padding: 50px;
   background-color: #fcfcfc; }
+
+.section-prices__content-wrapper {
+  width: 990px;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between; }
+
+/*price */
+.price {
+  width: 300px;
+  color: #fff;
+  background-color: #435061;
+  border-radius: 5px; }
+
+.price__value {
+  color: #435061;
+  background-color: #fff;
+  height: 70px;
+  font-size: 40px;
+  line-height: 70px;
+  text-align: center; }
 
 /*----------footer---------- */
 /*contacts */
