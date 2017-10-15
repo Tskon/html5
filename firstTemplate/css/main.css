@@ -204,13 +204,37 @@
   background-color: #435061;
   border-radius: 5px; }
 
+.price__name {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 30px;
+  margin: 12px; }
+
 .price__value {
   color: #435061;
   background-color: #fff;
   height: 70px;
+  border: 2px solid #435061;
   font-size: 40px;
   line-height: 70px;
   text-align: center; }
+
+.price__list {
+  font-size: 14px; }
+
+.price__buy-btn {
+  margin: 0 20px 20px;
+  border-radius: 5px;
+  border: none;
+  background-color: #fff;
+  width: 260px;
+  height: 40px; }
+  .price__buy-btn:hover {
+    background-color: #ddd; }
+  .price__buy-btn:focus {
+    outline: none;
+    background-color: antiquewhite; }
 
 /*----------footer---------- */
 /*contacts */
