@@ -188,7 +188,6 @@ $section-width: $main-width - 100px
     position: relative
     left: -12px
     top: 27px
-    z-index: 5
 
 .review__text
   margin-top: -10px
@@ -270,7 +269,33 @@ $section-width: $main-width - 100px
 .contacts__content
   display: flex
   flex-direction: row
-  justify-content: space-between
+  justify-content: space-around
+  width: $main-width - 420px
+  margin: 0 auto
+
+.contacts__contacts-list
+  margin-bottom: 30px
+  *
+    margin-bottom: 15px
+    &:before
+      content: ""
+      display: inline-block
+      width: 26px
+      height: 26px
+      margin: 0 5px 0 0
+      position: relative
+      top: 6px
+      //background: url("../images/contacts-icons.png")
+      background-image: url("../images/contacts-icons.png")
+
+.contacts__icq:before
+  background-position: -26px 0
+
+.contacts__mailru:before
+  background-position: -52px 0
+
+.contacts__phone:before
+  background-position: -77px 0
 
 .contacts__social-block div
   width: 43px
@@ -312,6 +337,16 @@ $section-width: $main-width - 100px
   width: 540px
   text-align: center
 
+.contact-form__item-name, .contact-form__item-email, .contact-form__item-message
+  &::-webkit-input-placeholder
+    color: $main-color
+  &::-moz-placeholder
+    color: $main-color
+  &:-moz-placeholder
+    color: $main-color
+  &:-ms-input-placeholder
+    color: $main-color
+
 .contact-form__item-name, .contact-form__item-email
   border-radius: 5px
   border-width: 0
@@ -326,7 +361,7 @@ $section-width: $main-width - 100px
 .contact-form__item-message
   border-radius: 5px
   border-width: 0
-  padding: 5px 10px
+  padding: 10px
   margin-bottom: 20px
   width: 500px
   &:focus

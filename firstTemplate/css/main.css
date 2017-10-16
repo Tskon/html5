@@ -168,8 +168,7 @@
     content: url("../images/arrow-review.png");
     position: relative;
     left: -12px;
-    top: 27px;
-    z-index: 5; }
+    top: 27px; }
 
 .review__text {
   margin-top: -10px;
@@ -250,7 +249,32 @@
 .contacts__content {
   display: flex;
   flex-direction: row;
-  justify-content: space-between; }
+  justify-content: space-around;
+  width: 860px;
+  margin: 0 auto; }
+
+.contacts__contacts-list {
+  margin-bottom: 30px; }
+  .contacts__contacts-list * {
+    margin-bottom: 15px; }
+    .contacts__contacts-list *:before {
+      content: "";
+      display: inline-block;
+      width: 26px;
+      height: 26px;
+      margin: 0 5px 0 0;
+      position: relative;
+      top: 6px;
+      background-image: url("../images/contacts-icons.png"); }
+
+.contacts__icq:before {
+  background-position: -26px 0; }
+
+.contacts__mailru:before {
+  background-position: -52px 0; }
+
+.contacts__phone:before {
+  background-position: -77px 0; }
 
 .contacts__social-block div {
   width: 43px;
@@ -291,6 +315,15 @@
   width: 540px;
   text-align: center; }
 
+.contact-form__item-name::-webkit-input-placeholder, .contact-form__item-email::-webkit-input-placeholder, .contact-form__item-message::-webkit-input-placeholder {
+  color: #435061; }
+.contact-form__item-name::-moz-placeholder, .contact-form__item-email::-moz-placeholder, .contact-form__item-message::-moz-placeholder {
+  color: #435061; }
+.contact-form__item-name:-moz-placeholder, .contact-form__item-email:-moz-placeholder, .contact-form__item-message:-moz-placeholder {
+  color: #435061; }
+.contact-form__item-name:-ms-input-placeholder, .contact-form__item-email:-ms-input-placeholder, .contact-form__item-message:-ms-input-placeholder {
+  color: #435061; }
+
 .contact-form__item-name, .contact-form__item-email {
   border-radius: 5px;
   border-width: 0;
@@ -305,7 +338,7 @@
 .contact-form__item-message {
   border-radius: 5px;
   border-width: 0;
-  padding: 5px 10px;
+  padding: 10px;
   margin-bottom: 20px;
   width: 500px; }
   .contact-form__item-message:focus {
