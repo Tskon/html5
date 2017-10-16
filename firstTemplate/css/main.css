@@ -231,7 +231,8 @@
   width: 260px;
   height: 40px;
   font-weight: 700;
-  color: #435061; }
+  color: #435061;
+  cursor: pointer; }
   .price__buy-btn:hover {
     background-color: #ddd; }
   .price__buy-btn:focus {
@@ -353,7 +354,8 @@
   width: 140px;
   height: 40px;
   font-weight: 700;
-  color: #435061; }
+  color: #435061;
+  cursor: pointer; }
   .contact-form__send-btn:hover {
     background-color: #ddd; }
   .contact-form__send-btn:focus {
