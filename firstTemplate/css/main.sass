@@ -102,6 +102,7 @@ $section-width: $main-width - 100px
 .plus
   width: 49%
   summary
+    cursor: pointer
     outline: none
     &::-webkit-details-marker
       display: none
@@ -266,10 +267,18 @@ $section-width: $main-width - 100px
   color: #fff
   padding: 50px
 
+.contacts__content
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+
 .contacts__social-block div
   width: 43px
   height: 42px
   display: inline-block
+
+.contacts__social-block a
+  text-decoration: none
 
 .contacts__twitter
   background-image: url('../images/social-buttons.png')
