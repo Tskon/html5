@@ -246,6 +246,36 @@
   color: #fff;
   padding: 50px; }
 
+.contacts__social-block div {
+  width: 43px;
+  height: 42px;
+  display: inline-block; }
+
+.contacts__twitter {
+  background-image: url("../images/social-buttons.png"); }
+  .contacts__twitter:hover {
+    background-position: 0 42px; }
+
+.contacts__facebook {
+  background: url("../images/social-buttons.png") -50px 0; }
+  .contacts__facebook:hover {
+    background-position: -50px 42px; }
+
+.contacts__linked-in {
+  background: url("../images/social-buttons.png") -98px 0; }
+  .contacts__linked-in:hover {
+    background-position: -98px 42px; }
+
+.contacts__google {
+  background: url("../images/social-buttons.png") -148px 0; }
+  .contacts__google:hover {
+    background-position: -148px 42px; }
+
+.contacts__youtube {
+  background: url("../images/social-buttons.png") -197px 0; }
+  .contacts__youtube:hover {
+    background-position: -197px 42px; }
+
 /*contact-form */
 .contact-form {
   display: inline-block;
