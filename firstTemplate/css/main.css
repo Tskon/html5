@@ -186,16 +186,17 @@
 
 /*----------prices---------- */
 .section-prices {
-  width: 1180px;
-  padding: 50px;
+  width: 1280px;
   background-color: #fcfcfc; }
 
 .section-prices__content-wrapper {
   width: 990px;
-  margin: 0 auto;
   display: flex;
   align-items: flex-end;
   justify-content: space-between; }
+
+.section-prices__title {
+  flex: none; }
 
 /*price */
 .price {
@@ -316,15 +317,6 @@
   width: 540px;
   text-align: center; }
 
-.contact-form__item-name::-webkit-input-placeholder, .contact-form__item-email::-webkit-input-placeholder, .contact-form__item-message::-webkit-input-placeholder {
-  color: #435061; }
-.contact-form__item-name::-moz-placeholder, .contact-form__item-email::-moz-placeholder, .contact-form__item-message::-moz-placeholder {
-  color: #435061; }
-.contact-form__item-name:-moz-placeholder, .contact-form__item-email:-moz-placeholder, .contact-form__item-message:-moz-placeholder {
-  color: #435061; }
-.contact-form__item-name:-ms-input-placeholder, .contact-form__item-email:-ms-input-placeholder, .contact-form__item-message:-ms-input-placeholder {
-  color: #435061; }
-
 .contact-form__item-name, .contact-form__item-email {
   border-radius: 5px;
   border-width: 0;
@@ -372,3 +364,49 @@
     letter-spacing: 0.3px;
     line-height: 24px;
     margin: 0; }
+
+/*----------video-background---------- */
+.homepage-hero-module {
+  border-right: none;
+  border-left: none;
+  position: relative; }
+
+.no-video .video-container video,
+.touch .video-container video {
+  display: none; }
+
+.no-video .video-container .poster,
+.touch .video-container .poster {
+  display: block !important; }
+
+.video-container {
+  position: relative;
+  margin: 0;
+  bottom: 0%;
+  left: 0%;
+  min-height: 300px;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background: #000; }
+  .video-container .poster img {
+    width: 1280px;
+    bottom: 0;
+    position: absolute; }
+  .video-container .filter {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    z-index: 100;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.4);
+    width: 1280px; }
+  .video-container video {
+    position: absolute;
+    z-index: 1;
+    bottom: 0; }
+  .video-container video.fillWidth {
+    width: 1280px;
+    position: absolute;
+    top: 0;
+    left: 0; }
