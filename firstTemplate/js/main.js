@@ -6,7 +6,7 @@ $( document ).ready(function() {
     initBannerVideoSize('.video-container .filter');
     initBannerVideoSize('.video-container video');
 
-    $(window).on('resize', function() {
+    $('.filter').on('resize', function() {
         scaleVideoContainer();
         scaleBannerVideoSize('.video-container .poster img');
         scaleBannerVideoSize('.video-container .filter');
@@ -17,7 +17,7 @@ $( document ).ready(function() {
 
 function scaleVideoContainer() {
 
-    var height = $(window).height() + 5;
+    var height = $('.filter').innerHeight();
     var unitHeight = parseInt(height) + 'px';
     $('.homepage-hero-module').css('height',unitHeight);
 
@@ -36,8 +36,8 @@ function initBannerVideoSize(element){
 
 function scaleBannerVideoSize(element){
 
-    var windowWidth = $(window).width(),
-        windowHeight = $(window).height() + 5,
+    var windowWidth = $('.filter').width(),
+        windowHeight = $('.filter').innerHeight(),
         videoWidth,
         videoHeight;
 
