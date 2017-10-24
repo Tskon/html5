@@ -1,0 +1,8 @@
+@import 'normalize';
+@import 'variables';
+@import 'header';
+
+.wrapper{
+  width: $main-width;
+  margin: 0 auto;
+}
