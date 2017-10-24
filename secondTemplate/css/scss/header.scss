@@ -1,0 +1,37 @@
+.main-header{
+  @include section;
+  background-image: url('../images/header-bg.jpg');
+  height: 1024px;
+  position: relative;
+  color: #fff;
+}
+.logo{
+  @include absolute(40px, 376px);
+  &:hover{
+    color: $color-hover;
+  }
+}
+.logo__title{
+  font-family: Raleway;
+  font-size: 34px;
+  font-weight: 400;
+  line-height: 34px;
+}
+
+.main-menu{
+  @include absolute(60px, 775px);
+}
+.main-menu__list{
+  list-style-type: none;
+}
+.main-menu__item{
+  display: inline-block;
+  a{
+    color: $font-color-lite;
+    text-decoration: none;
+    &:hover{
+      text-decoration: underline;
+      color: $color-hover;
+    }
+  }
+}
