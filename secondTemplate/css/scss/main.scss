@@ -5,4 +5,13 @@
 .wrapper{
   width: $main-width;
   margin: 0 auto;
+  color: $main-text-color;
+}
+a{
+  color: $main-text-color;
+  text-decoration: none;
+  &:hover{
+    color: $color-hover;
+    text-decoration: underline;
+  }
 }

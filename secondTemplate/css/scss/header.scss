@@ -6,16 +6,19 @@
   color: #fff;
 }
 .logo{
+  width: 180px;
+  height: 60px;
+  display: flex;
   @include absolute(40px, 376px);
   &:hover{
     color: $color-hover;
   }
 }
 .logo__title{
-  font-family: Raleway;
+  font-family: Raleway, sans-serif;
   font-size: 34px;
   font-weight: 400;
-  line-height: 34px;
+  padding-top: 14px;
 }
 
 .main-menu{
@@ -26,12 +29,18 @@
 }
 .main-menu__item{
   display: inline-block;
-  a{
-    color: $font-color-lite;
-    text-decoration: none;
-    &:hover{
-      text-decoration: underline;
-      color: $color-hover;
-    }
-  }
+  font-family: Montserrat, sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  margin-right: 30px;
+}
+
+.header-slider{
+  position: relative;
+  top: 380px;
+  text-align: center;
+}
+.header-slider__content{
+  width: 600px;
+  margin: 0 auto;
 }
