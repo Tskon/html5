@@ -1,4 +1,4 @@
-.main-header{
+.main-header {
   @include section;
   background-image: url('../images/header-bg.jpg');
   height: 1024px;
@@ -6,29 +6,33 @@
   color: #fff;
   display: flex;
 }
-.logo{
+
+.logo {
   width: 180px;
   height: 60px;
   display: flex;
-  @include absolute(40px, 376px);
-  &:hover{
+  @include absolute(40px, 0, 0, 376px);
+  &:hover {
     color: $color-hover;
   }
 }
-.logo__title{
+
+.logo__title {
   font-family: Raleway, sans-serif;
   font-size: 34px;
   font-weight: 400;
   padding-top: 14px;
 }
 
-.main-menu{
-  @include absolute(60px, 775px);
+.main-menu {
+  @include absolute(60px, 0, 0, 775px);
 }
-.main-menu__list{
+
+.main-menu__list {
   list-style-type: none;
 }
-.main-menu__item{
+
+.main-menu__item {
   display: inline-block;
   font-family: Montserrat, sans-serif;
   font-size: 14px;
@@ -36,24 +40,89 @@
   margin-right: 30px;
 }
 
-.header-slider{
+.header-slider {
   position: relative;
   align-self: flex-end;
+  display: flex;
+  justify-content: center;
   height: 645px;
   width: 100%;
   text-align: center;
 }
-.header-slider__content{
+
+.header-slider__content {
   width: 600px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
 }
-.header-slider__content-title2{
+
+.header-slider__content-title2 {
   font-family: Raleway, sans-serif;
   font-size: 36px;
   font-weight: 500;
 }
-.header-slider__content-title1{
-  font-family: Raleway;
+
+.header-slider__content-title1 {
+  font-family: Raleway, sans-serif;
   font-size: 52px;
   font-weight: 700;
+}
+
+.header-slider__content-description {
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+  margin-bottom: 50px;
+}
+
+.header-slider__content-button {
+  width: 140px;
+  margin: 0 auto;
+}
+
+.header-slider__left-arrow, .header-slider__right-arrow {
+  width: 40px;
+  height: 73px;
+  margin: 0 150px;
+  @include relative(100px);
+  position: relative;
+  top: 100px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url('../images/slider-left-arrow.png');
+}
+
+.header-slider__left-arrow {
+  float: left;
+}
+
+.header-slider__right-arrow {
+  @include rotate(180deg);
+  float: right;
+}
+
+.header-slider__radio-switcher-box {
+  margin: 0 auto;
+  @include relative(320px);
+}
+
+.header-slider__radio-switcher-item {
+  display: inline-block;
+  min-width: 11px;
+  min-height: 11px;
+  background-color: #fff;
+  opacity: 0.5;
+  margin: 0 3px;
+  @include border-radius(50%);
+}
+
+.header-slider__radio-switcher-item_active {
+  border: 2px solid #d2c0ad;
+  margin: 1px 0;
+  @include relative(3px);
+  opacity: 1;
+  background-color: transparent;
 }
