@@ -4,6 +4,7 @@
   height: 1024px;
   position: relative;
   color: #fff;
+  display: flex;
 }
 .logo{
   width: 180px;
@@ -37,10 +38,22 @@
 
 .header-slider{
   position: relative;
-  top: 380px;
+  align-self: flex-end;
+  height: 645px;
+  width: 100%;
   text-align: center;
 }
 .header-slider__content{
   width: 600px;
   margin: 0 auto;
+}
+.header-slider__content-title2{
+  font-family: Raleway, sans-serif;
+  font-size: 36px;
+  font-weight: 500;
+}
+.header-slider__content-title1{
+  font-family: Raleway;
+  font-size: 52px;
+  font-weight: 700;
 }
