@@ -87,20 +87,29 @@ $section-width: $main-width - 100px
 /*----------pluses----------
 
 .section-pluses
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-around
   width: $section-width
   background-color: #eee
   padding: 50px
 
+.section-pluses__title
+  display: block
+  width: 100%
+
 .section-pluses__list-wrapper
+  max-width: 48%
   display: flex
+  flex-direction: column
   flex-wrap: wrap
-  justify-content: space-between
 
 /*plus
 
 .plus
-  width: 49%
+  width: 100%
   summary
+    display: block
     cursor: pointer
     outline: none
     &::-webkit-details-marker
@@ -150,7 +159,7 @@ $section-width: $main-width - 100px
 .screenshots__description p
   margin: 0 0 0 15px
 
-/*----------section-reviews----------
+// section reviews
 
 .section-reviews
   width: $section-width
