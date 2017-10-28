@@ -292,6 +292,7 @@
 .contacts__social-block div {
   width: 43px;
   height: 42px;
+  margin: 1px;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
@@ -322,9 +323,9 @@
     background-position: -149px 43px; }
 
 .contacts__youtube {
-  background: url("../images/social-buttons.png") -197px 0; }
+  background: url("../images/social-buttons.png") -196px 0; }
   .contacts__youtube:hover {
-    background-position: -197px 43px; }
+    background-position: -196px 43px; }
 
 /*contact-form */
 .contact-form {
