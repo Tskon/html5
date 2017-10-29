@@ -128,13 +128,3 @@
   background-color: transparent;
 }
 
-.svg-icon {
-  height: 44px;
-  path{
-    fill: #555;
-    @include transition(200ms)
-  }
-  &:hover path{
-    fill: $color-hover;
-  }
-}
