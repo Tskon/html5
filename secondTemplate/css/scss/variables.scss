@@ -10,7 +10,6 @@ $button-color: #998675;
   -ms-border-radius: $radius;
   border-radius: $radius;
 }
-
 @mixin pseudo($display: block, $pos: absolute, $content: '') {
   content: $content;
   display: $display;
@@ -70,4 +69,10 @@ $button-color: #998675;
 
 @mixin section {
   width: 100%;
+}
+@mixin transition($ms){
+  transition: $ms;
+  transition-timing-function: ease-in-out;
+  -webkit-transition: $ms;
+  -webkit-transition-timing-function: ease-in-out;
 }

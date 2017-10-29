@@ -10,9 +10,9 @@
 a{
   color: $main-text-color;
   text-decoration: none;
+  @include transition(200ms);
   &:hover{
     color: $color-hover;
-    text-decoration: underline;
   }
 }
 .standart-button{
@@ -23,12 +23,13 @@ a{
   text-align: center;
   color: $font-color-lite;
   padding: 15px;
+  box-shadow: inset -0px -3px 0 0 #736357;
   @include border-radius(3px);
+  @include transition(200ms);
   &:hover{
     color: $font-color-lite;
     text-decoration: none;
-    background: transparent;
-    border: 3px solid $button-color;
-    padding: 12px 12px 12px 12px;
+    background: rgba(99, 86, 75, 0.8);
+    box-shadow: inset -0px -3px 0 0 rgba(73, 63, 57, 0.8);
   }
 }

@@ -12,6 +12,7 @@
   height: 60px;
   display: flex;
   @include absolute(40px, 0, 0, 376px);
+  @include transition(200ms);
   &:hover {
     color: $color-hover;
   }
@@ -125,4 +126,15 @@
   @include relative(3px);
   opacity: 1;
   background-color: transparent;
+}
+
+.svg-icon {
+  height: 44px;
+  path{
+    fill: #555;
+    @include transition(200ms)
+  }
+  &:hover path{
+    fill: $color-hover;
+  }
 }
