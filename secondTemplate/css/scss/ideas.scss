@@ -31,6 +31,7 @@
   width: 770px;
   height: 400px;
   display: inline-block;
+  z-index: 2;
   @include border-radius(5px);
   @include transition(200ms);
   &:hover{
@@ -44,7 +45,7 @@
 
 .ideas__example1 {
   @include absolute(82px,0,0,345px);
-  z-index: 1;
+
   &:hover{
     left: 400px * 0.3;
   }
@@ -62,6 +63,21 @@
 }
 
 .ideas__example3 {
-  z-index: 1;
+
   @include absolute(82px,0,0,805px);
+}
+
+// used in main js
+.transparent-hover{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0);
+  @include transition(200ms);
+}
+.black-hover{
+  background-color: rgba(0, 0, 0, 0.5);
 }
