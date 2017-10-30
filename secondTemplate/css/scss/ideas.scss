@@ -31,23 +31,34 @@
   width: 770px;
   height: 400px;
   display: inline-block;
-  cursor: pointer;
   @include border-radius(5px);
   @include transition(200ms);
   &:hover{
     box-shadow: 0 0 30px rgba(199,178,154,0.5);
+    z-index: 15;
+    top: -400px * 0.1 + 2;
+    width: 770px * 1.3;
+    height: 400px * 1.3;
   }
 }
 
 .ideas__example1 {
   @include absolute(82px,0,0,345px);
   z-index: 1;
+  &:hover{
+    left: 400px * 0.3;
+  }
 }
 
 .ideas__example2 {
   z-index: 10;
   height: 482px;
   margin: 0 auto;
+  &:hover{
+    @include relative();
+    height: 482px * 1.15;
+    width: 770px * 1.15;
+  }
 }
 
 .ideas__example3 {
