@@ -12,7 +12,7 @@ for (let i = 0; i < ideaItemArr.length; i++) {
       ideaItemArr[i].style.opacity = 0.7;
     }
     this.style.opacity = 1;
-    if (document.querySelector('.black-hover') == null) {
+    if (document.querySelector('.black-hover') === null) {
       div = document.createElement('div');
       div.classList.add('transparent-hover');
       document.body.appendChild(div);
@@ -21,7 +21,6 @@ for (let i = 0; i < ideaItemArr.length; i++) {
       }, 0);
     }
   });
-
   ideaItemArr[i].addEventListener('mouseout', function () {
     for (let i = 0; i < ideaItemArr.length; i++) {
       ideaItemArr[i].style.opacity = 1;

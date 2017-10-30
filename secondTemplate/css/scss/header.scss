@@ -49,6 +49,13 @@
   text-align: center;
 }
 
+// for ie
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .header-slider{
+    left: -310px;
+  }
+}
+
 .header-slider__content {
   width: 600px;
   margin: 0 auto;

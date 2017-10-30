@@ -45,7 +45,6 @@
 
 .ideas__example1 {
   @include absolute(82px,0,0,345px);
-
   &:hover{
     left: 400px * 0.3;
   }
@@ -63,7 +62,6 @@
 }
 
 .ideas__example3 {
-
   @include absolute(82px,0,0,805px);
 }
 
