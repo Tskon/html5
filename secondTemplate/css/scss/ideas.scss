@@ -1,4 +1,4 @@
-.ideas{
+.ideas {
   background-color: #fbfaf8;
   text-align: center;
   color: #8c8c8c;
@@ -6,9 +6,51 @@
   font-weight: 300;
   padding: 80px 0 0 0;
 }
-.ideas__h2{
+
+.ideas__h2 {
   font-family: Raleway, sans-serif;
   font-size: 30px;
   font-weight: 600;
   color: #555;
+}
+
+.ideas__descr{
+  max-width: 760px;
+  margin: 24px auto 40px;
+
+}
+
+.ideas__examples {
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  max-height: 482px;
+}
+
+.ideas__examples-item{
+  width: 770px;
+  height: 400px;
+  display: inline-block;
+  cursor: pointer;
+  @include border-radius(5px);
+  @include transition(200ms);
+  &:hover{
+    box-shadow: 0 0 30px rgba(199,178,154,0.5);
+  }
+}
+
+.ideas__example1 {
+  @include absolute(82px,0,0,345px);
+  z-index: 1;
+}
+
+.ideas__example2 {
+  z-index: 10;
+  height: 482px;
+  margin: 0 auto;
+}
+
+.ideas__example3 {
+  z-index: 1;
+  @include absolute(82px,0,0,805px);
 }

@@ -4,20 +4,24 @@
 @import 'about';
 @import 'ideas';
 
-.wrapper{
+.wrapper {
   width: $main-width;
   margin: 0 auto;
   color: $main-text-color;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
 }
-a{
+
+a {
   color: $main-text-color;
   text-decoration: none;
   @include transition(200ms);
-  &:hover{
+  &:hover {
     color: $color-hover;
   }
 }
-.standart-button{
+
+.standart-button {
   background-color: $button-color;
   font-family: Raleway, sans-serif;
   font-weight: 700;
@@ -28,7 +32,7 @@ a{
   box-shadow: inset -0px -3px 0 0 #736357;
   @include border-radius(3px);
   @include transition(200ms);
-  &:hover{
+  &:hover {
     color: $font-color-lite;
     text-decoration: none;
     background: rgba(99, 86, 75, 0.8);
