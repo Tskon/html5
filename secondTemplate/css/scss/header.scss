@@ -118,26 +118,24 @@
 
 .header-slider__radio-switcher-box {
   display: block;
-  width: 104px;
-  height: 11px;
+  width: 108px;
+  height: 10px;
   @include absolute(90%, 47.5%, 40px, 47%);
-
 }
 
 .header-slider__radio-switcher-item {
+  border: 2px solid #212227;
   display: inline-block;
-  min-width: 11px;
-  min-height: 11px;
+  min-width: 10px;
+  min-height: 10px;
   background-color: #fff;
   opacity: 0.5;
-  margin: 0 3px;
+  margin: 0 2px;
   @include border-radius(50%);
 }
 
 .header-slider__radio-switcher-item_active {
   border: 2px solid #d2c0ad;
-  margin: 1px 0;
-  @include relative(3px);
   opacity: 1;
   background-color: transparent;
 }

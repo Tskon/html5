@@ -30,6 +30,16 @@ rightArrow.addEventListener('click', function () {
   if (currentSlideNum > totalSlidesNum) currentSlideNum = 1;
 });
 
+let radioButtonsArr = document.querySelectorAll('.header-slider__radio-switcher-item');
+for(let j = 0; j < radioButtonsArr.length; j++){
+  radioButtonsArr[j].onclick = function(event) {
+    clearTimeout(timeout);
+    fade_to_next(currentSlideNum, event.target.id.substr(-1));
+    currentSlideNum = event.target.id.substr(-1);
+    return false; // отменить переход по url
+  };
+}
+
 function fade_to_next(currentSlideNum, nextSlideNum) {
   let currentSlide = document.getElementById('header-slider__moving-content-' + currentSlideNum);
   let nextSlide = document.getElementById('header-slider__moving-content-' + nextSlideNum);
@@ -50,7 +60,7 @@ function fade_to_next(currentSlideNum, nextSlideNum) {
     if (opacity === 1) {
       currentSlide.classList.add('hidden');
       clearTimeout(timeout);
-      changeActiveSwitcger(nextSlideNum);
+      changeActiveSwitcher(nextSlideNum);
       fadeNext(nextSlide);
     }
   }
@@ -66,9 +76,13 @@ function fade_to_next(currentSlideNum, nextSlideNum) {
       clearTimeout(timeout);
     }
   }
-  function changeActiveSwitcger(num){
-    console.log(num);
+}
+
+function changeActiveSwitcher(num){
+  for (let i = 0; i < radioButtonsArr.length; i++){
+    radioButtonsArr[i].classList.remove('header-slider__radio-switcher-item_active');
   }
+  radioButtonsArr[num - 1].classList.add('header-slider__radio-switcher-item_active');
 }
 // header slider end
 
