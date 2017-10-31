@@ -72,7 +72,7 @@ function fade_to_next(currentSlideNum, nextSlideNum) {
 }
 // header slider end
 
-// ideas animation start
+// ideas images animation start
 let ideaItemArr = document.querySelectorAll('.ideas__examples-item');
 let div;
 let timer1;
@@ -104,6 +104,10 @@ for (let i = 0; i < ideaItemArr.length; i++) {
 
     timer2 = setTimeout(function () {
       div.parentNode.removeChild(div);
+      let divs = document.querySelectorAll('.transparent-hover')
+      for(let i = 0; i < divs.length; i++){
+        divs[i].parentNode.removeChild(divs[i]);
+      }
     }, 220);
   });
 }
