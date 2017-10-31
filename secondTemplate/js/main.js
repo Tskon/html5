@@ -33,9 +33,10 @@ rightArrow.addEventListener('click', function () {
 let radioButtonsArr = document.querySelectorAll('.header-slider__radio-switcher-item');
 for(let j = 0; j < radioButtonsArr.length; j++){
   radioButtonsArr[j].onclick = function(event) {
+    let targetId = event.target.id.substr(-1)
     clearTimeout(timeout);
-    fade_to_next(currentSlideNum, event.target.id.substr(-1));
-    currentSlideNum = event.target.id.substr(-1);
+    fade_to_next(currentSlideNum, targetId);
+    currentSlideNum = +targetId;
     return false; // отменить переход по url
   };
 }
@@ -58,7 +59,9 @@ function fade_to_next(currentSlideNum, nextSlideNum) {
       fadeCurrent(currentSlide, nextSlide);
     }, timeOut);
     if (opacity === 1) {
-      currentSlide.classList.add('hidden');
+      for (let i = 1; i <= totalSlidesNum; i++){
+        document.getElementById('header-slider__moving-content-' + i).classList.add('hidden');
+      }
       clearTimeout(timeout);
       changeActiveSwitcher(nextSlideNum);
       fadeNext(nextSlide);

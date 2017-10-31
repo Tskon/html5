@@ -120,7 +120,7 @@
   display: block;
   width: 98px;
   height: 10px;
-  @include absolute(90%, 47.5%, 40px, 47%);
+  @include absolute(90%, 50%, 40px, 41%);
 }
 
 .header-slider__radio-switcher-item {
