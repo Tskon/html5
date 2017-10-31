@@ -118,7 +118,7 @@
 
 .header-slider__radio-switcher-box {
   display: block;
-  width: 108px;
+  width: 98px;
   height: 10px;
   @include absolute(90%, 47.5%, 40px, 47%);
 }
@@ -130,7 +130,7 @@
   min-height: 10px;
   background-color: #fff;
   opacity: 0.5;
-  margin: 0 2px;
+  margin: 0 1px;
   @include border-radius(50%);
 }
 
