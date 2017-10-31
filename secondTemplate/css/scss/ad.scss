@@ -1,8 +1,22 @@
 .ad{
   background-image: linear-gradient(to right, #211b19, #4e3427);
-  height: 150px;
+  max-height: 54px;
+  padding: 48px 375px;
 }
 .ad__button_align_right{
   float: right;
-  margin: 50px 375px;
+  //margin: 50px 375px;
+}
+
+.ad__h2{
+  font-family: Raleway;
+  font-size: 28px;
+  & span{
+    color: $button-color;
+  }
+}
+.ad__descr{
+  display: block;
+  font-size: 18px;
+  color: #615855;
 }
