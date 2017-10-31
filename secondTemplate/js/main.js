@@ -9,6 +9,8 @@ let timeout;
 let opacity = 100;
 
 leftArrow.addEventListener('click', function () {
+  clearTimeout(timeout);
+  opacity = 100;
   let newSlide = currentSlideNum - 1;
   if (newSlide < 1) {
     newSlide = 5;
@@ -19,6 +21,8 @@ leftArrow.addEventListener('click', function () {
 });
 
 rightArrow.addEventListener('click', function () {
+  clearTimeout(timeout);
+  opacity = 100;
   let newSlide = currentSlideNum + 1;
   if (newSlide > totalSlidesNum) {
     newSlide = 1;
@@ -28,25 +32,35 @@ rightArrow.addEventListener('click', function () {
   if (currentSlideNum > totalSlidesNum) currentSlideNum = 1;
 });
 
-function fade_to_next(currentSlide, nextSlide) {
-  opacity--;
-  let slideNow = document.getElementById('header-slider__moving-content-' + currentSlide);
-  let slideNext = document.getElementById('header-slider__moving-content-' + nextSlide);
-// console.log(slideNow);
-  slideNow.style.filter = 'alpha(opacity=' + opacity + ')';
-  slideNext.style.filter = 'alpha(opacity=' + (100 - opacity) + ')';
-  slideNow.style.opacity = opacity / 100;
-  slideNext.style.opacity = (100 - opacity) / 100;
-
-  timeout = setTimeout(function(){
-    fade_to_next(currentSlide, nextSlide);
+function fade_to_next(currentSlideNum, nextSlideNum) {
+  let currentSlide = document.getElementById('header-slider__moving-content-' + currentSlideNum);
+  let nextSlide = document.getElementById('header-slider__moving-content-' + nextSlideNum);
+  fadeCurrent(currentSlide, nextSlide);
+  function fadeCurrent(currentSlide, nextSlide){
+    opacity--;
+    console.log(currentSlide);
+    currentSlide.style.filter = 'alpha(opacity=' + opacity + ')';
+    currentSlide.style.opacity = opacity / 100;
+    timeout = setTimeout(function(){
+      fadeCurrent(currentSlide, nextSlide);
     }, timeOut);
-
-  if (opacity === 1) {
-    opacity = 100
-    slideNext.classList.toggle('hidden');
-    slideNow.classList.toggle('hidden');
-    clearTimeout(timeout);
+    if (opacity === 1) {
+      currentSlide.classList.add('hidden');
+      clearTimeout(timeout);
+      fadeNext(nextSlide);
+    }
+  }
+  function fadeNext(nextSlide){
+    opacity++;
+    nextSlide.classList.remove('hidden');
+    nextSlide.style.filter = 'alpha(opacity=' + opacity + ')';
+    nextSlide.style.opacity = opacity / 100;
+    timeout = setTimeout(function(){
+      fadeNext(nextSlide);
+    }, timeOut);
+    if (opacity === 100) {
+      clearTimeout(timeout);
+    }
   }
 }
 
