@@ -15,7 +15,7 @@
     display: block;
     margin: 30px auto;
     height: 3px;
-    width: 70px;
+    width: 45px;
     background-color: #f1eee9;
     @include transition(200ms);
   }
@@ -25,6 +25,7 @@
     }
     &:after {
       background-color: $color-hover;
+      width: 70px;
     }
     & .about__h3 {
       color: $color-hover;

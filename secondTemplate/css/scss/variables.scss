@@ -10,11 +10,13 @@ $button-color: #998675;
   -ms-border-radius: $radius;
   border-radius: $radius;
 }
+
 @mixin pseudo($display: block, $pos: absolute, $content: '') {
   content: $content;
   display: $display;
   position: $pos;
 }
+
 @mixin rotate($deg) {
   -webkit-transform: rotate($deg);
   -moz-transform: rotate($deg);
@@ -22,6 +24,7 @@ $button-color: #998675;
   -o-transform: rotate($deg);
   transform: rotate($deg);
 }
+
 @mixin css-triangle($color, $direction, $size: 6px, $position: absolute, $round: false) {
   @include pseudo($pos: $position);
   width: 0;
@@ -59,6 +62,7 @@ $button-color: #998675;
   bottom: $b;
   right: $r;
 }
+
 @mixin relative($t: 0, $r: 0, $b: 0, $l: 0) {
   position: relative;
   top: $t;
@@ -70,7 +74,8 @@ $button-color: #998675;
 @mixin section {
   width: 100%;
 }
-@mixin transition($ms){
+
+@mixin transition($ms: 300ms) {
   transition: $ms;
   transition-timing-function: ease-in-out;
   -webkit-transition: $ms;
