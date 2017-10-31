@@ -10,7 +10,6 @@ let opacity = 100;
 
 leftArrow.addEventListener('click', function () {
   clearTimeout(timeout);
-  opacity = 100;
   let newSlide = currentSlideNum - 1;
   if (newSlide < 1) {
     newSlide = 5;
@@ -22,7 +21,6 @@ leftArrow.addEventListener('click', function () {
 
 rightArrow.addEventListener('click', function () {
   clearTimeout(timeout);
-  opacity = 100;
   let newSlide = currentSlideNum + 1;
   if (newSlide > totalSlidesNum) {
     newSlide = 1;
@@ -35,6 +33,12 @@ rightArrow.addEventListener('click', function () {
 function fade_to_next(currentSlideNum, nextSlideNum) {
   let currentSlide = document.getElementById('header-slider__moving-content-' + currentSlideNum);
   let nextSlide = document.getElementById('header-slider__moving-content-' + nextSlideNum);
+  if (opacity < 100){
+    for (let i = 1; i <= totalSlidesNum; i++){
+      document.getElementById('header-slider__moving-content-' + i).classList.add('hidden');
+    }
+    opacity = 100;
+  }
   fadeCurrent(currentSlide, nextSlide);
   function fadeCurrent(currentSlide, nextSlide){
     opacity--;

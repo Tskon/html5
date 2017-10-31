@@ -100,6 +100,7 @@
   cursor: pointer;
   padding: 50px 66px;
   background: url('../images/slider-left-arrow.png') no-repeat center;
+  @include transition(200ms);
   &:hover{
     background-color: rgba(255,255,255,0.2);
   }
