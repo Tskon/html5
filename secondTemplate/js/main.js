@@ -38,7 +38,6 @@ function fade_to_next(currentSlideNum, nextSlideNum) {
   fadeCurrent(currentSlide, nextSlide);
   function fadeCurrent(currentSlide, nextSlide){
     opacity--;
-    console.log(currentSlide);
     currentSlide.style.filter = 'alpha(opacity=' + opacity + ')';
     currentSlide.style.opacity = opacity / 100;
     timeout = setTimeout(function(){
@@ -47,6 +46,7 @@ function fade_to_next(currentSlideNum, nextSlideNum) {
     if (opacity === 1) {
       currentSlide.classList.add('hidden');
       clearTimeout(timeout);
+      changeActiveSwitcger(nextSlideNum);
       fadeNext(nextSlide);
     }
   }
@@ -62,8 +62,10 @@ function fade_to_next(currentSlideNum, nextSlideNum) {
       clearTimeout(timeout);
     }
   }
+  function changeActiveSwitcger(num){
+    console.log(num);
+  }
 }
-
 // header slider end
 
 // ideas animation start
