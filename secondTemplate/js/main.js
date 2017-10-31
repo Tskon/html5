@@ -33,7 +33,7 @@ rightArrow.addEventListener('click', function () {
 let radioButtonsArr = document.querySelectorAll('.header-slider__radio-switcher-item');
 for(let j = 0; j < radioButtonsArr.length; j++){
   radioButtonsArr[j].onclick = function(event) {
-    let targetId = event.target.id.substr(-1)
+    let targetId = event.target.id.substr(-1);
     clearTimeout(timeout);
     fade_to_next(currentSlideNum, targetId);
     currentSlideNum = +targetId;
@@ -121,7 +121,7 @@ for (let i = 0; i < ideaItemArr.length; i++) {
 
     timer2 = setTimeout(function () {
       div.parentNode.removeChild(div);
-      let divs = document.querySelectorAll('.transparent-hover')
+      let divs = document.querySelectorAll('.transparent-hover');
       for(let i = 0; i < divs.length; i++){
         divs[i].parentNode.removeChild(divs[i]);
       }
