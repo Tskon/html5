@@ -61,6 +61,11 @@
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+  position: relative;
+}
+
+.header-slider__moving-content{
+  position: absolute;
 }
 
 .header-slider__content-title2 {
@@ -90,17 +95,19 @@
   width: 40px;
   height: 73px;
   margin: 0 150px;
-  @include relative(100px);
-  position: relative;
-  top: 100px;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-image: url('../images/slider-left-arrow.png');
+  @include relative(50px);
+  @include border-radius(50%);
+  cursor: pointer;
+  padding: 50px 66px;
+  background: url('../images/slider-left-arrow.png') no-repeat center;
+  &:hover{
+    background-color: rgba(255,255,255,0.2);
+  }
 }
 
 .header-slider__left-arrow {
   float: left;
+
 }
 
 .header-slider__right-arrow {
@@ -109,8 +116,11 @@
 }
 
 .header-slider__radio-switcher-box {
-  margin: 0 auto;
-  @include relative(320px);
+  display: block;
+  width: 104px;
+  height: 11px;
+  @include absolute(90%, 47.5%, 40px, 47%);
+
 }
 
 .header-slider__radio-switcher-item {
@@ -130,4 +140,3 @@
   opacity: 1;
   background-color: transparent;
 }
-
