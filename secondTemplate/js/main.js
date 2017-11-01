@@ -132,17 +132,27 @@ for (let i = 0; i < ideaItemArr.length; i++) {
 
 // video-player start
 function VideoPlayer() {
+  let videoPlayerWrapper = document.querySelector('.video-player');
   let videoPlayerHover = document.querySelector('.video-player__hover');
-  let videoPlayerButton = document.querySelector('.video-player__play-button');
+  let videoPlayerButton = document.querySelector('.video-player__play-button-wrapper');
   let videoPlayerVideo = document.querySelector('.video-player__video');
 
   videoPlayerButton.addEventListener('click', function () {
-    videoPlayerHover.classList.add('hidden');
-
-  });
-  videoPlayerHover.addEventListener('click', function () {
+    videoPlayerHover.classList.toggle('hidden');
     videoPlayerButton.classList.add('hidden');
-
+    if(videoPlayerHover.classList.contains('hidden')){
+      videoPlayerVideo.play();
+    }else{
+      videoPlayerVideo.pause();
+    }
+  });
+  videoPlayerWrapper.addEventListener('mouseover', function () {
+    videoPlayerButton.classList.remove('hidden');
+  });
+  videoPlayerWrapper.addEventListener('mouseout', function () {
+    if (videoPlayerHover.classList.contains('hidden')){
+      videoPlayerButton.classList.add('hidden');
+    }
   });
 }
 new VideoPlayer();
