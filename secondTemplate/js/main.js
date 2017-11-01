@@ -129,3 +129,22 @@ for (let i = 0; i < ideaItemArr.length; i++) {
   });
 }
 // ideas animation end
+
+// video-player start
+function VideoPlayer() {
+  let videoPlayerHover = document.querySelector('.video-player__hover');
+  let videoPlayerButton = document.querySelector('.video-player__play-button');
+  let videoPlayerVideo = document.querySelector('.video-player__video');
+
+  videoPlayerButton.addEventListener('click', function () {
+    videoPlayerHover.classList.add('hidden');
+
+  });
+  videoPlayerHover.addEventListener('click', function () {
+    videoPlayerButton.classList.add('hidden');
+
+  });
+}
+new VideoPlayer();
+
+// video-player end
