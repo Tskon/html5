@@ -67,6 +67,7 @@
 
 .header-slider__moving-content{
   position: absolute;
+  @include transition(500ms);
 }
 
 .header-slider__content-title2 {

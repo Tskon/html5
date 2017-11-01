@@ -22,10 +22,13 @@
   max-height: 70px;
   max-width: 70px;
   padding: 15px;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.2);
   margin: 210px 910px 40px;
   z-index: 2;
   cursor: pointer;
+  &:hover{
+    background-color: rgba(255, 255, 255, 0.2);
+  }
 }
 
 .video-player__play-button{
