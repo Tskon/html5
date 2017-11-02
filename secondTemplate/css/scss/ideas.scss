@@ -33,7 +33,7 @@
   display: inline-block;
   z-index: 2;
   @include border-radius(5px);
-  @include transition(200ms);
+  @include transition(340ms);
   &:hover{
     box-shadow: 0 0 30px rgba(199,178,154,0.5);
     z-index: 15;
