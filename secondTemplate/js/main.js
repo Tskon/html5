@@ -8,6 +8,8 @@ function Slider() {
   let totalSlidesNum = 5;  // количество слайдов
   let timeout;
 
+  document.getElementById('header-slider__moving-content-' + currentSlideNum).style.zIndex = 2;
+
   leftArrow.addEventListener('click', function () {
     clearTimeout(timeout);
     let newSlide = currentSlideNum - 1;
