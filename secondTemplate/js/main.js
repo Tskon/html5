@@ -45,11 +45,13 @@ function Slider() {
     let nextSlide = document.getElementById('header-slider__moving-content-' + nextSlideNum);
     for (let i = 1; i <= totalSlidesNum; i++) {
       document.getElementById('header-slider__moving-content-' + i).classList.add('hidden');
+      document.getElementById('header-slider__moving-content-' + i).style.zIndex = 1;
       radioButtonsArr[i-1].classList.remove('header-slider__radio-switcher-item_active');
     }
     radioButtonsArr[nextSlideNum - 1].classList.add('header-slider__radio-switcher-item_active');
     timeout = setTimeout(function () {
       nextSlide.classList.remove('hidden');
+      nextSlide.style.zIndex = 2;
     }, 500);
   }
 }

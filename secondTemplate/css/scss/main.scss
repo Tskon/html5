@@ -37,13 +37,14 @@ a {
   @include border-radius(3px);
   @include transition(200ms);
   &:hover {
+    opacity: 100;
     color: $font-color-lite;
     text-decoration: none;
     background: rgba(99, 86, 75, 0.8);
     box-shadow: inset -0px -3px 0 0 rgba(73, 63, 57, 0.8);
   }
 }
-.hidden{
-  //display: none;
+
+.hidden {
   opacity: 0;
 }
