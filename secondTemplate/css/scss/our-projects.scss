@@ -63,10 +63,26 @@
   text-align: left;
   display: flex;
   flex-direction: column;
+  &:hover {
+    .our-projects__project-about {
+      background-color: #362f2d;
+      &:before {
+        @include css-triangle(#362f2d, up, 10px, $position: absolute, $round: false);
+        @include relative(-30px, 0, 0, -10px);
+      }
+    }
+    .our-projects__project-name{
+      color: #ffffff;
+    }
+    .our-projects__project-descr{
+      color: #c7b299;
+    }
+  }
 }
 
 .our-projects__project-image{
-
+  width: 370px;
+  height: 237px;
 }
 
 .our-projects__project-about{
@@ -100,4 +116,6 @@
 .our-projects__button{
   display: inline-block;
   margin: 0 auto;
+  max-width: 170px;
+  align-self: center;
 }
