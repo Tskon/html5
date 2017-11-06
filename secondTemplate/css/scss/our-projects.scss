@@ -1,0 +1,51 @@
+.our-projects {
+  padding: 80px 375px;
+  color: #8c8c8c;
+  a {
+    color: #8c8c8c;
+    font-family: Montserrat, sans-serif;
+    font-size: 14px;
+  }
+}
+
+.our-projects__h2 {
+  display: block;
+  text-align: center;
+  font-family: Raleway, sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+  color: #555;
+}
+
+.our-projects__descr {
+  display: block;
+  text-align: center;
+}
+
+.our-projects__menu {
+  margin-top: 35px;
+  text-align: center;
+  list-style-type: none;
+}
+
+.our-projects__menu-item {
+  display: inline-block;
+  border: solid 1px #ebebeb;
+  padding: 10px 25px;
+  @include transition(200ms);
+  @include border-radius(3px);
+  &:hover{
+    cursor: pointer;
+    background-color: $color-hover;
+    a {
+      color: #fff;
+    }
+  }
+}
+
+.our-projects__menu-item_active{
+  background-color: #998675;
+  a {
+    color: #fff;
+  }
+}

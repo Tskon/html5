@@ -61,6 +61,7 @@ function Slider() {
 new Slider();
 // header slider end
 
+
 // ideas images animation start
 function ExaplesGalery() {
   let ideaItemArr = document.querySelectorAll('.ideas__examples-item');
@@ -106,6 +107,7 @@ function ExaplesGalery() {
 new ExaplesGalery();
 // ideas animation end
 
+
 // video-player start
 function VideoPlayer() {
   let videoPlayerWrapper = document.querySelector('.video-player');
@@ -135,40 +137,36 @@ function VideoPlayer() {
 new VideoPlayer();
 // video-player end
 
+
 // statistic-grow start
-function startGrow() {
-  let itemsArr = document.querySelectorAll('.statistic__item-num');
-  let section = document.querySelector('.statistic');
+function StatisticGrow(wrapperSelector, numSelector) {
+  let itemsArr = document.querySelectorAll(numSelector);
+  let section = document.querySelector(wrapperSelector);
   let totalArr = [];
   let isAlreadyStart = false;
   for (let i = 0; i < itemsArr.length; i++) {
     totalArr.push(itemsArr[i].innerHTML);
     itemsArr[i].innerHTML = 0;
   }
-
-
   window.onscroll = function () {
     if (!isAlreadyStart) {
       setTimeout(function () {
-        getYCoord(document.querySelector('.statistic'));
         let mainScroll = window.pageYOffset - section.offsetHeight;
         let elemPosition = getYCoord(document.querySelector('.statistic')) - window.innerHeight;
         if (elemPosition < mainScroll) {
-          new GrowItems(itemsArr);
+          startGrow(itemsArr);
           isAlreadyStart = true;
         }
       },1000);
     }
   };
 
-
-  function GrowItems(nodesArr) {
+  function startGrow(nodesArr) {
     for (let i = 0; i < itemsArr.length; i++) {
       grow(nodesArr[i], totalArr[i]);
     }
 
     function grow(node, total) {
-
       let start = 0;
       let interval = 20;
       let timer;
@@ -179,11 +177,8 @@ function startGrow() {
           clearInterval(timer);
         } else {
           node.innerHTML = Math.round(start);
-
         }
-
       }, interval);
-
     }
   }
 
@@ -192,6 +187,5 @@ function startGrow() {
     return box.top + pageYOffset
   }
 }
-
-startGrow();
+new StatisticGrow('.statistic', '.statistic__item-num');
 // statistic-grow end
