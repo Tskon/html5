@@ -38,8 +38,8 @@ $button-color: #998675;
     border-top: $size solid $color;
     margin-top: 0 - round( $size / 2.5 );
   } @else if $direction == up {
-    border-left: $size solid transparent;
-    border-right: $size solid transparent;
+    border-left: ($size * 1.5) solid transparent;
+    border-right: ($size * 1.5) solid transparent;
     border-bottom: $size solid $color;
     margin-bottom: 0 - round( $size / 2.5 );
   } @else if $direction == right {
