@@ -1,0 +1,30 @@
+.statistic{
+  background-image: linear-gradient(to right, #211b19, #4e3427);
+  padding: 70px 0 60px;
+}
+
+.statistic__item{
+  width: 120px;
+  margin: 0 20px;
+  text-align: center;
+}
+
+.statistic__item-img{
+  width: 44px;
+  height: 44px;
+  path{
+    fill: $color-hover;
+  }
+}
+
+.statistic__item-num{
+  display: block;
+  font-size: 40px;
+  font-weight: 200;
+}
+
+.statistic__item-name{
+  display: block;
+  color: $color-hover;
+  font-size: 14px;
+}
