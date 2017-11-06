@@ -142,6 +142,7 @@ new VideoPlayer();
 function StatisticGrow(wrapperSelector, numSelector) {
   let itemsArr = document.querySelectorAll(numSelector);
   let section = document.querySelector(wrapperSelector);
+  let elemPosition = getYCoord(document.querySelector('.statistic')) - window.innerHeight;
   let totalArr = [];
   let isAlreadyStart = false;
   for (let i = 0; i < itemsArr.length; i++) {
@@ -152,7 +153,6 @@ function StatisticGrow(wrapperSelector, numSelector) {
     if (!isAlreadyStart) {
       setTimeout(function () {
         let mainScroll = window.pageYOffset - section.offsetHeight;
-        let elemPosition = getYCoord(document.querySelector('.statistic')) - window.innerHeight;
         if (elemPosition < mainScroll) {
           startGrow(itemsArr);
           isAlreadyStart = true;
@@ -183,7 +183,7 @@ function StatisticGrow(wrapperSelector, numSelector) {
   }
 
   function getYCoord(elem) {
-    var box = elem.getBoundingClientRect();
+    let box = elem.getBoundingClientRect();
     return box.top + pageYOffset
   }
 }

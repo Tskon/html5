@@ -75,7 +75,9 @@
   height: 100px;
   &:before{
     display: block;
-    @include css-triangle(#000, up, 10px, $position: absolute, $round: false)
+    width: 30px;
+    @include css-triangle(#fbfaf8, up, 10px, $position: absolute, $round: false);
+    @include relative(-10px, 0, 0, 20px);
   }
 }
 
