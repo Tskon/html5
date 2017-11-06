@@ -57,13 +57,18 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  width: 1200px;
+  margin: 0 auto;
 }
 
 .our-projects__project{
   background-color: #000;
   text-align: left;
+  max-height: 337px;
   display: flex;
   flex-direction: column;
+  margin: 15px;
+  @include relative();
   &:hover {
     .our-projects__project-about {
       background-color: #362f2d;
@@ -82,6 +87,12 @@
       opacity:0.3; -moz-opacity:0.3;
       filter:alpha(opacity=40);
     }
+    .our-projects__project-link{
+      opacity: 1;
+    }
+    .our-projects__project-search{
+      opacity: 1;
+    }
   }
 }
 
@@ -93,6 +104,36 @@
   @include transition();
 }
 
+.our-projects__project-link{
+  display: inline-block;
+  background-image: url("../images/projects/link.png");
+  width: 26px;
+  height: 26px;
+  @include transition();
+  @include absolute(106px, 0, 0, 200px);
+  z-index: 3;
+  opacity: 0;
+  cursor: pointer;
+  &:hover{
+    background-image: url("../images/projects/link-hover.png");
+  }
+}
+
+.our-projects__project-search{
+  display: inline-block;
+  background-image: url("../images/projects/lupa.png");
+  width: 26px;
+  height: 25px;
+  @include transition();
+  @include absolute(106px, 0, 0, 145px);
+  z-index: 3;
+  opacity: 0;
+  cursor: pointer;
+  &:hover{
+    background-image: url("../images/projects/lupa-hover.png");
+  }
+}
+
 .our-projects__project-about{
   background-color: #fbfaf8;
   width: 310px;
@@ -100,6 +141,7 @@
   padding: 20px 30px;
   @include transition();
   &:before{
+    content: '';
     @include transition();
     display: block;
     width: 30px;
@@ -127,7 +169,7 @@
 
 .our-projects__button{
   display: inline-block;
-  margin: 0 auto;
+  margin: 30px auto 0;
   max-width: 170px;
   align-self: center;
 }
