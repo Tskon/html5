@@ -26,6 +26,7 @@ $button-color: #998675;
 }
 
 @mixin css-triangle($color, $direction, $size: 6px, $position: absolute, $round: false) {
+  @include transition();
   @include pseudo($pos: $position);
   width: 0;
   height: 0;

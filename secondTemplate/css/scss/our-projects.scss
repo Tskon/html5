@@ -60,6 +60,7 @@
 }
 
 .our-projects__project{
+  background-color: #000;
   text-align: left;
   display: flex;
   flex-direction: column;
@@ -77,12 +78,19 @@
     .our-projects__project-descr{
       color: #c7b299;
     }
+    .our-projects__project-image{
+      opacity:0.3; -moz-opacity:0.3;
+      filter:alpha(opacity=40);
+    }
   }
 }
 
 .our-projects__project-image{
   width: 370px;
   height: 237px;
+  opacity:1.0; -moz-opacity:1.0;
+  filter:alpha(opacity=100);
+  @include transition();
 }
 
 .our-projects__project-about{
@@ -90,7 +98,9 @@
   width: 310px;
   height: 60px;
   padding: 20px 30px;
+  @include transition();
   &:before{
+    @include transition();
     display: block;
     width: 30px;
     @include css-triangle(#fbfaf8, up, 10px, $position: absolute, $round: false);
@@ -105,12 +115,14 @@
   font-weight: 500;
   color: #c7b299;
   margin-bottom: 10px;
+  @include transition();
 }
 
 .our-projects__project-descr{
   display: block;
   font-size: 14px;
   color: #d1d1d1;
+  @include transition();
 }
 
 .our-projects__button{
