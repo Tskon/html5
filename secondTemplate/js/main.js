@@ -187,5 +187,6 @@ function StatisticGrow(wrapperSelector, numSelector) {
     return box.top + pageYOffset
   }
 }
+
 new StatisticGrow('.statistic', '.statistic__item-num');
 // statistic-grow end
