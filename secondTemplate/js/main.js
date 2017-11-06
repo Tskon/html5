@@ -48,7 +48,7 @@ function Slider() {
     for (let i = 1; i <= totalSlidesNum; i++) {
       document.getElementById('header-slider__moving-content-' + i).classList.add('hidden');
       document.getElementById('header-slider__moving-content-' + i).style.zIndex = 1;
-      radioButtonsArr[i-1].classList.remove('header-slider__radio-switcher-item_active');
+      radioButtonsArr[i - 1].classList.remove('header-slider__radio-switcher-item_active');
     }
     radioButtonsArr[nextSlideNum - 1].classList.add('header-slider__radio-switcher-item_active');
     timeout = setTimeout(function () {
@@ -133,5 +133,65 @@ function VideoPlayer() {
 }
 
 new VideoPlayer();
-
 // video-player end
+
+// statistic-grow start
+function startGrow() {
+  let itemsArr = document.querySelectorAll('.statistic__item-num');
+  let section = document.querySelector('.statistic');
+  let totalArr = [];
+  let isAlreadyStart = false;
+  for (let i = 0; i < itemsArr.length; i++) {
+    totalArr.push(itemsArr[i].innerHTML);
+    itemsArr[i].innerHTML = 0;
+  }
+
+
+  window.onscroll = function () {
+    if (!isAlreadyStart) {
+      setTimeout(function () {
+        getYCoord(document.querySelector('.statistic'));
+        let mainScroll = window.pageYOffset - section.offsetHeight;
+        let elemPosition = getYCoord(document.querySelector('.statistic')) - window.innerHeight;
+        if (elemPosition < mainScroll) {
+          new GrowItems(itemsArr);
+          isAlreadyStart = true;
+        }
+      },1000);
+    }
+  };
+
+
+  function GrowItems(nodesArr) {
+    for (let i = 0; i < itemsArr.length; i++) {
+      grow(nodesArr[i], totalArr[i]);
+    }
+
+    function grow(node, total) {
+
+      let start = 0;
+      let interval = 20;
+      let timer;
+      timer = setInterval(function () {
+        start += (total / 100) + 10;
+        if (start >= total) {
+          node.innerHTML = Math.round(total);
+          clearInterval(timer);
+        } else {
+          node.innerHTML = Math.round(start);
+
+        }
+
+      }, interval);
+
+    }
+  }
+
+  function getYCoord(elem) {
+    var box = elem.getBoundingClientRect();
+    return box.top + pageYOffset
+  }
+}
+
+startGrow();
+// statistic-grow end

@@ -1,12 +1,23 @@
 .statistic{
   background-image: linear-gradient(to right, #211b19, #4e3427);
   padding: 70px 0 60px;
+  display: flex;
+  justify-content: center;
 }
 
 .statistic__item{
   width: 120px;
   margin: 0 20px;
   text-align: center;
+  display: inline-block;
+  &:after{
+    content: '';
+    display: block;
+    background-color: #fff;
+    height: 2px;
+    width: 30px;
+    margin: 30px auto 0;
+  }
 }
 
 .statistic__item-img{
@@ -17,10 +28,19 @@
   }
 }
 
+.statistic__item-cup{
+  width: 48px;
+}
+
+.statistic__item-dish{
+  width: 54px;
+}
+
 .statistic__item-num{
   display: block;
   font-size: 40px;
   font-weight: 200;
+  margin-top: 20px;
 }
 
 .statistic__item-name{
