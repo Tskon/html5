@@ -1,0 +1,49 @@
+.recent-posts{
+  color: #8c8c8c;
+  a{
+    color: #c7b299;
+  }
+}
+
+.recent-posts__h2{
+  display: block;
+  text-align: center;
+  font-family: Raleway, sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+  color: #555;
+}
+
+.recent-posts__content-wrapper{
+  display: flex;
+  justify-content: center;
+}
+
+.recent-posts__item{
+  @include relative();
+  max-width: 370px;
+  display: flex;
+  flex-direction: column;
+  background-color: #000;
+  &:hover {
+    .recent-posts__item-about {
+      background-color: #362f2d;
+
+    }
+    .recent-posts__item-name{
+      color: #ffffff;
+    }
+    .recent-posts__item-descr{
+      color: #c7b299;
+    }
+    .recent-posts__image{
+      opacity:0.3; -moz-opacity:0.3;
+      filter:alpha(opacity=40);
+    }
+  }
+}
+
+.recent-posts__date{
+  @include absolute(20px, 0, 0, 20px);
+  width: 50px;
+}
