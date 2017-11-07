@@ -142,7 +142,7 @@ new VideoPlayer();
 function StatisticGrow(wrapperSelector, numSelector) {
   let itemsArr = document.querySelectorAll(numSelector);
   let section = document.querySelector(wrapperSelector);
-  let elemPosition = getYCoord(document.querySelector('.statistic')) - window.innerHeight - 100;
+  let elemPosition = getYCoord(document.querySelector('.statistic')) - window.innerHeight - 50;
   let totalArr = [];
   let isAlreadyStart = false;
   for (let i = 0; i < itemsArr.length; i++) {

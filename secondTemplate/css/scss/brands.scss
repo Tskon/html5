@@ -1,0 +1,39 @@
+.brands {
+  height: 209px;
+  background-image: url('../images/brands-bg.jpg');
+  padding: 140px 350px;
+}
+
+.brands__item {
+  display: inline-block;
+  width: 210px;
+  height: 210px;
+  margin: 0 45px;
+  cursor: pointer;
+  background-image: url('../images/brands-sprite.png');
+}
+
+.brands__brand1:hover {
+  background-position: 0 210px ;
+}
+
+.brands__brand2 {
+  background-position: -300px 0;
+  &:hover{
+    background-position: -300px 210px;
+  }
+}
+
+.brands__brand3 {
+  background-position: -600px 0;
+  &:hover{
+    background-position: -600px 210px;
+  }
+}
+
+.brands__brand4 {
+  background-position: -900px 0;
+  &:hover{
+    background-position: -900px 210px;
+  }
+}
