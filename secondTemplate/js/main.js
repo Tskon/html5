@@ -153,7 +153,7 @@ function StatisticGrow(wrapperSelector, numSelector) {
     if (!isAlreadyStart) {
       setTimeout(function () {
         let mainScroll = window.pageYOffset - section.offsetHeight;
-        if (elemPosition < mainScroll && elemPosition + 800 > mainScroll) {
+        if (elemPosition < mainScroll && elemPosition + window.innerHeight - 50 > mainScroll) {
           startGrow(itemsArr);
           isAlreadyStart = true;
         }
