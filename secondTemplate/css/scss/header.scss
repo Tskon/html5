@@ -12,11 +12,14 @@
   height: 60px;
   display: flex;
   cursor: pointer;
-  @include absolute(40px, 0, 0, 376px);
   @include transition(200ms);
   &:hover {
     color: $color-hover;
   }
+}
+
+.main-header__logo_position{
+  @include absolute(40px, 0, 0, 376px);
 }
 
 .logo__title {

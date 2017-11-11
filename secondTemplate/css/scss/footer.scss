@@ -1,0 +1,33 @@
+.footer-content{
+  background-color: #191919;
+  padding: 80px 0;
+
+}
+
+.footer-content__waxom {
+  position: relative;
+}
+
+.copyright{
+  background-color: #111111;
+  padding: 45px 375px;
+  font-size: 13px;
+}
+
+.copyright__menu{
+  list-style: none;
+  display: inline-block;
+}
+
+.copyright__menu_align_right{
+  float: right;
+}
+
+.copyright__menu-item{
+  display: inline-block;
+  padding: 0 12px 0 8px;
+  border-right: 1px solid #2d2d2d;
+  &:last-child{
+    border-right: none;
+  }
+}
