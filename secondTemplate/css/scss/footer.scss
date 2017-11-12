@@ -1,33 +1,126 @@
-.footer-content{
-  background-color: #191919;
-  padding: 80px 0;
+.footer {
+  color: #555555;
+  font-size: 14px;
+}
 
+.footer-content {
+  background-color: #191919;
+  padding: 80px 375px;
+  display: flex;
+}
+
+.footer__logo {
+  color: #fff;
 }
 
 .footer-content__waxom {
   position: relative;
+  width: 260px;
+  @include transition(400ms);
+  &:hover {
+    color: #c7b299;
+  }
 }
 
-.copyright{
+.footer-content__read-more {
+  @include transition(200ms);
+  @include relative();
+  &:after {
+    @include css-triangle(#fff, right, $size: 4px);
+    top: 6px;
+    left: 92px;
+  }
+  &:hover {
+    color: lighten($color-hover, 10%);
+    &:after {
+      @include css-triangle($color-hover, right, $size: 4px);
+    }
+  }
+}
+
+.footer-content__columns-wrapper{
+  width: 970px;
+  display: flex;
+  flex-wrap: nowrap;
+  margin-left: 30px;
+}
+
+.footer-recent-posts, .our-twitter, .dribble-widget{
+  width: 270px;
+  margin: 0 15px;
+}
+
+.dribble-widget__title{
+  margin: 0 0 15px 0;
+  display: inline-block;
+}
+
+.our-twitter__item, .footer-recent-posts__item{
+  @include transition(400ms);
+  &:not(:last-child):after{
+    content: '';
+    height: 1px;
+    background-color: #252525;
+    display: block;
+  }
+  &:hover{
+    color: #c7b299;
+    .our-twitter__date, .footer-recent-posts__date{
+      color: #fff;
+    }
+  }
+}
+
+.our-twitter__title, .footer-recent-posts__title, .dribble-widget__title{
+  font-family: Raleway, sans-serif;
+  font-size: 24px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.our-twitter__date, .footer-recent-posts__date{
+  font-size: 12px;
+  color: #363636;
+  @include transition(400ms);
+}
+
+.our-twitter__descr_color_blue{
+  cursor: pointer;
+  color: #00bff3;
+}
+
+.copyright {
   background-color: #111111;
   padding: 45px 375px;
   font-size: 13px;
+  color: #959595;
+  height: 20px;
+  a {
+    color: #959595;
+    &:hover {
+      color: #c7b299;
+    }
+  }
 }
 
-.copyright__menu{
+.copyright__menu {
   list-style: none;
   display: inline-block;
+  margin: 0;
 }
 
-.copyright__menu_align_right{
+.copyright__menu_align_right {
   float: right;
 }
 
-.copyright__menu-item{
+.copyright__menu-item {
   display: inline-block;
   padding: 0 12px 0 8px;
-  border-right: 1px solid #2d2d2d;
-  &:last-child{
-    border-right: none;
+  &:not(:last-child){
+    border-right: 1px solid #2d2d2d;
   }
+}
+
+.copyright__menu .copyright__menu-item_color_light {
+  color: #ddd;
 }
