@@ -1,0 +1,26 @@
+@media (max-width: 800px) {
+
+  .wrapper {
+    width: 605px;
+  }
+
+  .main-header {
+    height: 150px;
+  }
+
+  .main-header__logo_position{
+    @include relative(30px, 0, 0, 40px);
+  }
+
+  .main-header__top-line{
+    display: none;
+  }
+
+  .header-slider{
+    display: none;
+  }
+
+  .about {
+
+  }
+}

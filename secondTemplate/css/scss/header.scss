@@ -43,19 +43,6 @@
   margin-right: 30px;
 }
 
-.main-header__star-wars{
-  @include relative(-29px, 0, 0, 700px);
-  @include border-radius(20px);
-  padding: 4px;
-  display: inline-block;
-  width: 100px;
-  height: 37px;
-  background: url('../images/star_wars.png') no-repeat 4px 2px;
-  &:hover{
-    box-shadow: 0 0 30px rgba(199,178,154,0.5);
-  }
-}
-
 .header-slider {
   position: relative;
   align-self: flex-end;
