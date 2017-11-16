@@ -1,4 +1,7 @@
 @media (max-width: 800px) {
+  .ideas, .ad, .statistic, .video-player, .footer-content {
+    display: none;
+  }
 
   .wrapper {
     width: 605px;
@@ -8,19 +11,163 @@
     height: 150px;
   }
 
-  .main-header__logo_position{
+  .main-header__logo_position {
     @include relative(30px, 0, 0, 40px);
   }
 
-  .main-header__top-line{
+  .main-header__top-line {
     display: none;
   }
 
-  .header-slider{
+  .header-slider {
     display: none;
   }
 
   .about {
+    flex-wrap: wrap;
+  }
 
+  .about__article {
+    width: 45%;
+    margin: 10px;
+  }
+
+  .our-projects {
+    padding: 10px 0;
+  }
+
+  .our-projects__menu {
+    padding: 0;
+  }
+
+  .our-projects__menu-item {
+    padding: 5px 10px;
+  }
+
+  .our-projects__content-wrapper{
+    width: 605px;
+  }
+
+  .our-projects__project{
+    width: 270px;
+    &:hover .our-projects__project-about:before{
+      @include relative(-20px);
+    }
+  }
+
+  .our-projects__project-image{
+    width: 270px;
+    height: auto;
+  }
+
+  .our-projects__project-about{
+    width: 240px;
+    padding: 10px 15px;
+    &:before{
+      @include relative(-20px);
+    }
+  }
+
+  .our-projects__project-search{
+    @include absolute(76px, 0, 0, 150px);
+  }
+
+  .our-projects__project-link{
+    @include absolute(76px, 0, 0, 95px);
+  }
+
+  .for-mobile{
+    padding: 50px 0 0;
+    height: 541px;
+  }
+
+  .for-mobile__text-wrapper {
+    padding: 0 30px;
+    margin: 0;
+  }
+
+  .for-mobile__h2{
+    display: block;
+    text-align: center;
+  }
+
+  .for-mobile__list{
+    float: right;
+    margin: 40px 0 0;
+    max-width: 320px;
+  }
+
+  .for-mobile__image{
+    width: 233px;
+    height: 340px;
+    @include absolute(250px, 0, 0, 20px)
+  }
+
+  .recent-posts{
+    padding: 15px 0;
+  }
+
+  .recent-posts__descr{
+    width: 95%;
+  }
+
+  .recent-posts__content-wrapper {
+    flex-wrap: wrap;
+  }
+
+  .recent-posts__arrows-box{
+    display: none;
+  }
+
+  .brands{
+    padding: 26px 0;
+    height: 100px;
+    text-align: center;
+    background-size: 605px;
+  }
+
+  .brands__item{
+    width: 100px;
+    height: 98px;
+    margin: 0 20px;
+    background-size: 520px;
+  }
+
+  .brands__brand1:hover {
+    background-position: 0 -103px ;
+  }
+
+  .brands__brand2 {
+    background-position: -140px 0;
+    &:hover{
+      background-position: -140px -103px;
+    }
+  }
+
+  .brands__brand3 {
+    background-position: -280px 0;
+    &:hover{
+      background-position: -280px -103px;
+    }
+  }
+
+  .brands__brand4 {
+    background-position: -420px 0;
+    &:hover{
+      background-position: -420px -103px;
+    }
+  }
+
+  .copyright{
+    padding: 50px 0 0;
+    height: 80px;
+  }
+
+  .copyright__menu{
+    display: block;
+    text-align: center;
+    padding: 0;
+    margin-bottom: 30px;
+    float: none;
   }
 }
