@@ -1,5 +1,25 @@
 'use strict';
 
+// header burger-menu start
+function BurgerMenu(menuNode, menuSelector, wrapperClass){
+  let btn = document.querySelector(menuSelector);
+  let menuWrapper = document.createElement('div');
+
+  btn.parentNode.appendChild(menuWrapper);
+
+  btn.addEventListener('click', function () {
+    menuWrapper.classList.toggle(wrapperClass);
+    if (menuWrapper.classList.contains(wrapperClass)){
+      menuWrapper.innerHTML = menuNode.innerHTML;
+    }else {
+      menuWrapper.innerHTML = '';
+    }
+  });
+}
+
+new BurgerMenu(document.querySelector('.main-menu'),'.main-header__burger-menu-button', 'main-header__burger-menu-wrapper');
+// header burger-menu end
+
 // header slider start
 function Slider() {
   let leftArrow = document.querySelector('.header-slider__left-arrow');

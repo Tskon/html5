@@ -11,6 +11,58 @@
     height: 150px;
   }
 
+  .main-header__burger-menu {
+    display: block;
+    position: fixed;
+    top: 40px;
+    width: 100%;
+    height: 50px;
+  }
+
+  .main-header__burger-menu-button{
+    background: url("../images/burger-menu.png") no-repeat 1px;
+    background-size: 52px;
+    background-color: rgba(0, 0, 0, .5);
+    padding: 2px;
+    cursor: pointer;
+    @include border-radius(10px);
+    width: 50px;
+    height: 50px;
+    @include relative(0, 0, 0, 510px);
+    z-index: 2;
+  }
+
+  .main-header__burger-menu-wrapper{
+    margin-top: -95px;
+    width: 605px;
+    height: 400px;
+    padding: 90px 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1;
+    -webkit-border-bottom-left-radius: 10px;
+    -moz-border-radius-bottomleft: 10px;
+    border-bottom-left-radius: 10px;
+    -webkit-border-bottom-right-radius: 10px;
+    -moz-border-radius-bottomright: 10px;
+    border-bottom-right-radius: 10px;
+    @include transition();
+  }
+
+  .main-menu__list{
+
+  }
+
+  .main-menu__item{
+    display: block;
+    text-align: center;
+    padding: 10px;
+    @include border-radius(6px);
+    &:hover{
+      background-color: rgba(255, 255, 255, .1);
+      cursor: pointer;
+    }
+  }
+
   .main-header__logo_position {
     @include relative(30px, 0, 0, 40px);
   }
@@ -44,39 +96,39 @@
     padding: 5px 10px;
   }
 
-  .our-projects__content-wrapper{
+  .our-projects__content-wrapper {
     width: 605px;
   }
 
-  .our-projects__project{
+  .our-projects__project {
     width: 270px;
-    &:hover .our-projects__project-about:before{
+    &:hover .our-projects__project-about:before {
       @include relative(-20px);
     }
   }
 
-  .our-projects__project-image{
+  .our-projects__project-image {
     width: 270px;
     height: auto;
   }
 
-  .our-projects__project-about{
+  .our-projects__project-about {
     width: 240px;
     padding: 10px 15px;
-    &:before{
+    &:before {
       @include relative(-20px);
     }
   }
 
-  .our-projects__project-search{
+  .our-projects__project-search {
     @include absolute(76px, 0, 0, 150px);
   }
 
-  .our-projects__project-link{
+  .our-projects__project-link {
     @include absolute(76px, 0, 0, 95px);
   }
 
-  .for-mobile{
+  .for-mobile {
     padding: 50px 0 0;
     height: 541px;
   }
@@ -86,28 +138,28 @@
     margin: 0;
   }
 
-  .for-mobile__h2{
+  .for-mobile__h2 {
     display: block;
     text-align: center;
   }
 
-  .for-mobile__list{
+  .for-mobile__list {
     float: right;
     margin: 40px 0 0;
     max-width: 320px;
   }
 
-  .for-mobile__image{
+  .for-mobile__image {
     width: 233px;
     height: 340px;
     @include absolute(250px, 0, 0, 20px)
   }
 
-  .recent-posts{
+  .recent-posts {
     padding: 15px 0;
   }
 
-  .recent-posts__descr{
+  .recent-posts__descr {
     width: 95%;
   }
 
@@ -115,18 +167,18 @@
     flex-wrap: wrap;
   }
 
-  .recent-posts__arrows-box{
+  .recent-posts__arrows-box {
     display: none;
   }
 
-  .brands{
+  .brands {
     padding: 26px 0;
     height: 100px;
     text-align: center;
     background-size: 605px;
   }
 
-  .brands__item{
+  .brands__item {
     width: 100px;
     height: 98px;
     margin: 0 20px;
@@ -134,36 +186,36 @@
   }
 
   .brands__brand1:hover {
-    background-position: 0 -103px ;
+    background-position: 0 -103px;
   }
 
   .brands__brand2 {
     background-position: -140px 0;
-    &:hover{
+    &:hover {
       background-position: -140px -103px;
     }
   }
 
   .brands__brand3 {
     background-position: -280px 0;
-    &:hover{
+    &:hover {
       background-position: -280px -103px;
     }
   }
 
   .brands__brand4 {
     background-position: -420px 0;
-    &:hover{
+    &:hover {
       background-position: -420px -103px;
     }
   }
 
-  .copyright{
+  .copyright {
     padding: 50px 0 0;
     height: 80px;
   }
 
-  .copyright__menu{
+  .copyright__menu {
     display: block;
     text-align: center;
     padding: 0;
