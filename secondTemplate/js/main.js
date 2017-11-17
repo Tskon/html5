@@ -151,6 +151,7 @@ function VideoPlayer() {
   let videoPlayerHover = document.querySelector('.video-player__hover');
   let videoPlayerButton = document.querySelector('.video-player__play-button-wrapper');
   let videoPlayerVideo = document.querySelector('.video-player__video');
+  let videoPlayerDuration = document.querySelector('.video-player__video-duration');
 
   videoPlayerButton.addEventListener('click', function () {
     videoPlayerHover.classList.toggle('hidden');
@@ -159,6 +160,7 @@ function VideoPlayer() {
       videoPlayerVideo.play();
     } else {
       videoPlayerVideo.pause();
+      videoPlayerDuration.innerHTML = formatTime(videoPlayerVideo.currentTime);
     }
   });
   videoPlayerWrapper.addEventListener('mouseover', function () {
@@ -169,6 +171,19 @@ function VideoPlayer() {
       videoPlayerButton.classList.add('hidden');
     }
   });
+  function formatTime(secNum){
+    let num = Math.round(secNum);
+    let min = 0;
+    if ((num/60) >= 1){
+      min = Math.floor(num/60);
+      num = num % 60;
+      if (min < 10) min = "0" + min;
+    }else{
+      min = '00';
+    }
+    if (num < 10) num = "0" + num;
+    return min + ':' + num;
+  }
 }
 
 new VideoPlayer();
