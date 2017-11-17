@@ -155,6 +155,11 @@ function VideoPlayer() {
   let videoPlayerVideo = document.querySelector('.video-player__video');
   let videoPlayerDuration = document.querySelector('.video-player__video-duration');
 
+  videoPlayerVideo.addEventListener('loadedmetadata', function() {
+    videoPlayerDuration.innerHTML = formatTime(videoPlayerVideo.duration);
+  });
+
+
   videoPlayerButton.addEventListener('click', function () {
     videoPlayerHover.classList.toggle('hidden');
     videoPlayerButton.classList.add('hidden');
