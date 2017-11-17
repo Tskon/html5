@@ -1,5 +1,5 @@
 @media (max-width: 800px) {
-  .ideas, .ad, .statistic, .video-player, .footer-content {
+  .ideas, .ad, .statistic, .footer-content {
     display: none;
   }
 
@@ -126,6 +126,29 @@
 
   .our-projects__project-link {
     @include absolute(76px, 0, 0, 95px);
+  }
+
+  .video-player{
+    height: 210px;
+  }
+
+  .video-player__play-button-wrapper{
+    margin: 10px 252px 0;
+  }
+
+  .video-player__h2{
+    margin-top: 110px;
+    font-size: 18px;
+  }
+
+  .video-player__descr{
+    margin: 5px auto;
+    font-size: 12px;
+  }
+
+  .video-player__video-duration{
+    font-size: 14px;
+    color: #c7b299;
   }
 
   .for-mobile {
