@@ -20,6 +20,7 @@ function BurgerMenu(menuNode, menuSelector, wrapperClass){
 new BurgerMenu(document.querySelector('.main-menu'),'.main-header__burger-menu-button', 'main-header__burger-menu-wrapper');
 // header burger-menu end
 
+
 // header search start
 function Search(wrapSelector, formSelector, inputSelector, btnSelector){
   let wrapper = document.querySelector(wrapSelector);
@@ -36,6 +37,7 @@ function Search(wrapSelector, formSelector, inputSelector, btnSelector){
 new Search('.main-header__search', '.main-header__search-form', '.main-header__search-input',
   '.main-header__search-btn');
 // header search end
+
 
 // header slider start
 function Slider() {
