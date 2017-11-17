@@ -12,12 +12,53 @@
 @import 'brands';
 @import 'footer';
 
+@font-face {
+  font-family: "RalewayRegular";
+  src: url('../fonts/Raleway-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "RalewayLight";
+  src: url('../fonts/Raleway-Light.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "RalewaySemiBold";
+  src: url('../fonts/Raleway-SemiBold.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "RalewayBold";
+  src: url('../fonts/Raleway-Bold.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "MontserratLight";
+  src: url('../fonts/Montserrat-Light.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "MontserratRegular";
+  src: url('../fonts/Montserrat-Regular.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
 .wrapper {
   width: $main-width;
   margin: 0 auto;
   color: $main-text-color;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 300;
+  font-family: 'MontserratLight', sans-serif;
   font-size: 16px;
 }
 
@@ -32,8 +73,7 @@ a {
 
 .standart-button {
   background-color: $button-color;
-  font-family: Raleway, sans-serif;
-  font-weight: 700;
+  font-family: RalewayBold, sans-serif;
   line-height: 23px;
   text-align: center;
   color: $font-color-lite;

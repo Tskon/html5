@@ -20,6 +20,23 @@ function BurgerMenu(menuNode, menuSelector, wrapperClass){
 new BurgerMenu(document.querySelector('.main-menu'),'.main-header__burger-menu-button', 'main-header__burger-menu-wrapper');
 // header burger-menu end
 
+// header search start
+function Search(wrapSelector, formSelector, inputSelector, btnSelector){
+  let wrapper = document.querySelector(wrapSelector);
+  let form = document.querySelector(formSelector);
+  let input = document.querySelector(inputSelector);
+  let btn = document.querySelector(btnSelector);
+  wrapper.addEventListener('click', function () {
+    form.classList.remove('hidden');
+    input.style.width = '130px';
+    btn.style.display = 'inline-block';
+  });
+}
+
+new Search('.main-header__search', '.main-header__search-form', '.main-header__search-input',
+  '.main-header__search-btn');
+// header search end
+
 // header slider start
 function Slider() {
   let leftArrow = document.querySelector('.header-slider__left-arrow');

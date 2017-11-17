@@ -48,8 +48,8 @@
     @include transition();
   }
 
-  .main-menu__list{
-
+  .main-header__search-form{
+    display: none;
   }
 
   .main-menu__item{

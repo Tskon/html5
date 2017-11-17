@@ -27,10 +27,55 @@
 }
 
 .logo__title {
-  font-family: Raleway, sans-serif;
+  font-family: RalewayRegular, sans-serif;
   font-size: 34px;
   font-weight: 400;
   padding-top: 14px;
+}
+
+.main-header__search{
+  width: 24px;
+  height: 24px;
+  @include absolute(73px, 0, 0, 1550px);
+  z-index: 2;
+  svg{
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+  }
+  path{
+    cursor: pointer;
+    fill: #fff;
+  }
+}
+
+.main-header__search-form{
+  width: 300px;
+  @include transition();
+  @include relative(-33px, 0, 0, -10px);
+}
+
+.main-header__search-input{
+  @include border-radius(15px);
+  @include transition();
+  border: 1px solid white;
+  background-color: transparent;
+  padding: 6px 6px 6px 40px;
+  outline:none;
+  width: 1px;
+  color: #fff;
+  z-index: 1; &:focus{
+    text-overline-style: none;
+  }
+}
+.main-header__search-btn{
+  border: 1px solid white;
+  @include border-radius(15px);
+  background-color: transparent;
+  padding: 6px;
+  color: #fff;
+  cursor: pointer;
+  display: none;
 }
 
 .main-menu {
@@ -78,13 +123,13 @@
 }
 
 .header-slider__content-title2 {
-  font-family: Raleway, sans-serif;
+  font-family: RalewaySemiBold, sans-serif;
   font-size: 36px;
   font-weight: 500;
 }
 
 .header-slider__content-title1 {
-  font-family: Raleway, sans-serif;
+  font-family: RalewayBold, sans-serif;
   font-size: 52px;
   font-weight: 700;
 }
