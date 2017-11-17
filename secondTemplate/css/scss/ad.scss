@@ -5,11 +5,10 @@
 }
 .ad__button_align_right{
   float: right;
-  //margin: 50px 375px;
 }
 
 .ad__h2{
-  font-family: Raleway;
+  font-family: RalewayRegular, sans-serif;
   font-size: 28px;
   & span{
     color: $button-color;

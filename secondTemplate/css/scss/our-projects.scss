@@ -9,9 +9,8 @@
 .our-projects__h2 {
   display: block;
   text-align: center;
-  font-family: Raleway, sans-serif;
+  font-family: RalewaySemiBold, sans-serif;
   font-size: 30px;
-  font-weight: 600;
   color: #555;
 }
 
@@ -34,7 +33,7 @@
   @include border-radius(3px);
   a {
     color: #8c8c8c;
-    font-family: Montserrat, sans-serif;
+    font-family: MontserratLight, sans-serif;
     font-size: 14px;
   }
   &:hover{
@@ -152,9 +151,8 @@
 
 .our-projects__project-name{
   display: block;
-  font-family: Raleway, sans-serif;
+  font-family: RalewayRegular, sans-serif;
   font-size: 20px;
-  font-weight: 500;
   color: #c7b299;
   margin-bottom: 10px;
   @include transition();
